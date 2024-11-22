@@ -3,64 +3,127 @@
     text-decoration: none;
 }
 
-/* Navbar general */
+/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     border-bottom: 1px solid #ddd;
-    background-color: #fff; /* Asegura fondo blanco en dispositivos móviles */
+    padding: 0.5rem 1rem;
 }
 
 /* Logo */
 .logo-img {
-    height: 50px;
+    height: 40px;
 }
 
-.brand-name {
-    font-family: 'Times New Roman', serif;
-    font-size: 24px;
+/* Menú */
+.menu-section {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-toggler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem; /* Tamaño del ícono */
+    color: #333; /* Color del ícono */
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+.navbar-toggler i {
+    font-size: 1.5rem; /* Tamaño del ícono */
+    margin-right: 0.5rem; /* Espaciado entre ícono y texto */
+}
+
+.menu-text {
+    font-size: 1rem; /* Ajusta el tamaño del texto */
+    color: #333; /* Color del texto */
+    display: inline; /* Asegura que el texto esté siempre visible */
     font-weight: bold;
 }
 
-/* Búsqueda */
-.search-bar input {
-    width: 100%; /* Ajustar al contenedor */
-    max-width: 300px; /* Limitar el ancho */
+/* Responsive Behavior */
+@media (max-width: 768px) {
+    .menu-text {
+        display: inline; /* El texto 'Menú' permanece visible en móviles */
+    }
 }
 
-.btn-search {
-    background: none;
+/* Search Bar */
+.search-bar {
+    flex-grow: 1;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 0.5rem 1rem;
+    flex-grow: 1;
+    border: 1px solid #ddd;
+}
+
+.search-bar button {
+    background-color: #FF69B4;
+    color: #fff;
     border: none;
-    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
 }
 
 /* Iconos */
+.navbar-icons {
+    display: flex;
+    gap: 15px;
+}
+
 .navbar-icons .nav-icon {
     font-size: 1.2rem;
     color: #333;
-    transition: color 0.3s;
 }
 
 .navbar-icons .nav-icon:hover {
-    color: #BD0081;
+    color: #FF69B4;
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
+    /* Menu Section */
+    .menu-section {
+        order: 1; /* Keeps the menu section first */
+        flex-grow: 1; /* Allows it to expand in available space */
+        justify-content: flex-start; /* Align to the left */
+    }
+
+
+    /* Search Bar */
     .search-bar {
-        margin-bottom: 10px; /* Espacio extra en móviles */
+        order: 3; /* Positions the search bar below the menu section */
+        width: 100%; /* Ensures full width on mobile */
+        margin-top: 10px; /* Adds spacing between elements */
     }
 
-    .search-bar input {
-        width: 100%; /* Ocupa todo el ancho disponible */
-    }
-
+    /* Navbar Icons */
     .navbar-icons {
-        justify-content: center;
+        order: 2; /* Positions icons after the menu but above the search bar */
+        justify-content: flex-end; /* Aligns icons to the right */
+        flex-grow: 1; /* Allows icons to take space when needed */
+        gap: 10px; /* Adds spacing between icons */
     }
 }
+
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 7rem; /* Increased padding for mobile to account for navbar height */
+    }
+}
+
 
 
 
@@ -229,7 +292,6 @@ body {
     .hero-image {
         width: 600px;
         right: 20px;
-        top: -20px;
     }
 }
 
