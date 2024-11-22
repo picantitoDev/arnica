@@ -389,181 +389,41 @@ body {
 
 
 
-
-/* ================== Contenedor de Carrusel ================== */
-.carousel {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-bottom: 40px;
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Controles del Carrusel */
-.carousel-control-prev,
-.carousel-control-next {
-    width: 40px;
-    height: 40px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+.product-card {
+    width: 18rem;
+    margin: 0 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    transition: transform 0.3s;
+    background-color: #fff;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-image {
+    max-height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.carousel-indicators {
+    bottom: -30px;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    width: 20px;
-    height: 20px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    filter: invert(1);
-}
-
-/* Hover para los Controles */
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-    transform: scale(1.05);
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-/* Diseño responsivo para el carrusel */
-@media (max-width: 768px) {
-    .product-card {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
-    .carousel-inner {
-        padding: 10px;
-    }
-}
-
-@media (max-width: 576px) {
-    .carousel-inner {
-        flex-direction: column;
-    }
-
-    .product-card {
-        width: 100%;
-    }
-}
-
-
-/* ================== Estilo de Productos ================== */
-.products-container {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Tarjeta del Producto */
-.product-card {
-    width: 320px;
-    height: 420px;
-    padding: 20px;
-    margin: 0 15px;
-    background-color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover para la Tarjeta del Producto */
-.product-link:hover .product-card {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Enlace del Producto */
-.product-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    transition: all 0.3s ease;
-}
-
-/* Imagen del Producto */
-.product-image {
-    position: relative;
-    width: 220px;
-    height: 300px;
-    overflow: hidden;
-    margin: 0 auto 15px;
-}
-
-.product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Ícono de Corazón */
-.heart-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.5rem;
-    color: #E30303;
-}
-
-/* Nombre del Producto */
-.product-name {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-/* Precio del Producto */
-.product-price {
-    font-size: 1.1rem;
-    color: #444;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-/* Calificación del Producto */
-.product-rating {
-    color: #ff69b4;
-    font-size: 1.5rem;
-}
-
-/* Eliminar Subrayado y Color Azul en Hover */
-.product-link:hover {
-    text-decoration: none;
-}
-
-.product-link:hover .product-name,
-.product-link:hover .product-price,
-.product-link:hover .product-rating {
-    color: black;
-}
-
-/* ================== Responsive Design ================== */
-@media (max-width: 768px) {
-    .products-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .product-card {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        left: 5px;
-        right: 5px;
-    }
+    background-color: #000;
 }
 
 
