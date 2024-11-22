@@ -3,57 +3,57 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kite+One&family=Laila:wght@400;700&display=swap" rel="stylesheet">
-
-
-    
     <title>Árnica | Cosméticos Naturales</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container d-flex align-items-center">
-            <!-- Logo -->
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="img/logo.png" alt="Logo AB" class="logo-img">
-            </a>
-    
-            <!-- Menú con ícono de hamburguesa y texto siempre visible -->
-            <div class="d-flex align-items-center menu-section">
-                <button class="navbar-toggler border-0 d-flex align-items-center" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-bars me-2"></i> <!-- Ícono de hamburguesa -->
-                    <span class="menu-text">Menú</span>
-                </button>
+    <!-- Navigation Section -->
+    <section id="navigation">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container d-flex align-items-center">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="img/logo.png" alt="Logo AB" class="logo-img">
+                </a>
+
+                <!-- Menu Section -->
+                <div class="d-flex align-items-center menu-section">
+                    <button class="navbar-toggler border-0 d-flex align-items-center" type="button"
+                        data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fas fa-bars me-2"></i>
+                        <span class="menu-text">Menú</span>
+                    </button>
+                </div>
+
+                <!-- Search Bar -->
+                <form class="d-flex mx-auto search-bar">
+                    <input class="form-control rounded-pill" type="search" placeholder="Buscar productos"
+                        aria-label="Buscar">
+                    <button class="btn btn-search" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+
+                <!-- Icons -->
+                <div class="navbar-icons ms-auto">
+                    <a href="#" class="nav-icon"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
+                    <a href="#" class="nav-icon"><i class="fas fa-shopping-cart"></i></a>
+                </div>
             </div>
-    
-            <!-- Barra de búsqueda -->
-            <form class="d-flex mx-auto search-bar">
-                <input class="form-control rounded-pill" type="search" placeholder="Buscar productos" aria-label="Buscar">
-                <button class="btn btn-search" type="submit">
-                    <i class="fas fa-search"></i>
-                </button>
-            </form>
-    
-            <!-- Iconos -->
-            <div class="navbar-icons ms-auto">
-                <a href="#" class="nav-icon"><i class="fas fa-heart"></i></a>
-                <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
-                <a href="#" class="nav-icon"><i class="fas fa-shopping-cart"></i></a>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </section>
 
     <!-- Hero Section -->
-    <section class="container hero-container">
+    <section id="hero" class="container hero-container">
         <div class="text-section">
             <h1>Impulsando tu <br>belleza, al <span class="highlight">natural</span></h1>
             <p>Los mejores productos de maquillaje en Trujillo, con ingredientes 100% naturales</p>
@@ -78,83 +78,88 @@
         </div>
     </section>
 
-    <div class=" container featured-products-title">
-        <h2>PRODUCTOS DESTACADOS</h2>
-    </div>
+    <!-- Featured Products Section -->
+    <section id="featured-products">
+        <div class="container featured-products-title">
+            <h2>PRODUCTOS DESTACADOS</h2>
+        </div>
 
-    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <!-- Product 1 -->
-            <div class="carousel-item active">
-                <div class="d-flex justify-content-center">
-                    <div class="card product-card">
-                        <div class="product-image">
-                            <img src="img/producto1.png" class="card-img-top" alt="Athena Serum">
-                            <div class="heart-icon"><i class="fas fa-heart"></i></div>
+        <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Product 1 -->
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center">
+                        <div class="card product-card">
+                            <div class="product-image">
+                                <img src="img/producto1.png" class="card-img-top" alt="Athena Serum">
+                                <div class="heart-icon"><i class="fas fa-heart"></i></div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="product-name">ATHENA SERUM DE VITAMINA C 30ML</h5>
+                                <p class="product-price">S/. 126.00</p>
+                                <div class="product-rating">★★★★★</div>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <h5 class="product-name">ATHENA SERUM DE VITAMINA C 30ML</h5>
-                            <p class="product-price">S/. 126.00</p>
-                            <div class="product-rating">★★★★★</div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="card product-card">
+                            <div class="product-image">
+                                <img src="img/producto2.png" class="card-img-top" alt="Blush Labial">
+                                <div class="heart-icon"><i class="fas fa-heart"></i></div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="product-name">BLUSH LABIAL NATURAL</h5>
+                                <p class="product-price">S/. 98.00</p>
+                                <div class="product-rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="card product-card">
+                            <div class="product-image">
+                                <img src="img/producto3.png" class="card-img-top" alt="Bulgarian Rose Water">
+                                <div class="heart-icon"><i class="fas fa-heart"></i></div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="product-name">BULGARIAN ROSE WATER</h5>
+                                <p class="product-price">S/. 110.00</p>
+                                <div class="product-rating">★★★★★</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Product 2 -->
-            <div class="carousel-item">
-                <div class="d-flex justify-content-center">
-                    <div class="card product-card">
-                        <div class="product-image">
-                            <img src="img/producto2.png" class="card-img-top" alt="Blush Labial">
-                            <div class="heart-icon"><i class="fas fa-heart"></i></div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="product-name">BLUSH LABIAL NATURAL</h5>
-                            <p class="product-price">S/. 98.00</p>
-                            <div class="product-rating">★★★★★</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Product 3 -->
-            <div class="carousel-item">
-                <div class="d-flex justify-content-center">
-                    <div class="card product-card">
-                        <div class="product-image">
-                            <img src="img/producto3.png" class="card-img-top" alt="Bulgarian Rose Water">
-                            <div class="heart-icon"><i class="fas fa-heart"></i></div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="product-name">BULGARIAN ROSE WATER</h5>
-                            <p class="product-price">S/. 110.00</p>
-                            <div class="product-rating">★★★★★</div>
-                        </div>
-                    </div>
-                </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Promo Section -->
+    <section id="promo">
+        <div class="container promo-section">
+            <div class="promo-content">
+                <span class="promo-tagline">Skincare</span>
+                <h1 class="promo-title">40% de <br> Descuento</h1>
+                <p class="promo-subtitle">En bases y correctores</p>
+                <a href="#" class="promo-button">Ver en tienda</a>
             </div>
         </div>
-    
-        <!-- Carousel Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
-    </div>
+    </section>
 
-
-
-    <div class="container promo-section">
-        <div class="promo-content">
-            <span class="promo-tagline">Skincare</span>
-            <h1 class="promo-title">40% de <br> Descuento</h1>
-            <p class="promo-subtitle">En bases y correctores</p>
-            <a href="#" class="promo-button">Ver en tienda</a>
-        </div>
-    </div>
-
-    <section class="container about-us-section">
+    <!-- About Us Section -->
+    <section id="about-us" class="container about-us-section">
         <div class="about-us-content">
             <h1 class="about-us-title">
                 Somos la primera <br>marca de maquillaje <br>
@@ -163,32 +168,36 @@
             <a href="#" class="about-us-button">Conocer más</a>
         </div>
     </section>
-    
-    <section class="container testimonials-section">
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container testimonials-section">
         <h2 class="testimonials-title">Lo que nuestros clientes dicen...</h2>
         <div class="testimonials-container">
-            <!-- Testimonio 1 -->
+            <!-- Testimonial 1 -->
             <div class="testimonial-card">
                 <img src="img/quote-icon.png" alt="Comillas" class="quote-icon">
-                <p class="testimonial-text">"El mejor maquillaje que he probado, mi piel luce radiante y los ingredientes naturales me dan confianza para usarlo todos los días."</p>
+                <p class="testimonial-text">"El mejor maquillaje que he probado, mi piel luce radiante y los
+                    ingredientes naturales me dan confianza para usarlo todos los días."</p>
                 <img src="img/person1.png" alt="María P." class="testimonial-photo">
                 <h4 class="testimonial-name">María P.</h4>
                 <p class="testimonial-occupation">Abogada</p>
             </div>
-    
-            <!-- Testimonio 2 -->
+
+            <!-- Testimonial 2 -->
             <div class="testimonial-card">
                 <img src="img/quote-icon.png" alt="Comillas" class="quote-icon">
-                <p class="testimonial-text">"Me encanta saber que mi maquillaje no solo es hermoso, sino también respetuoso con el medio ambiente."</p>
+                <p class="testimonial-text">"Me encanta saber que mi maquillaje no solo es hermoso, sino también
+                    respetuoso con el medio ambiente."</p>
                 <img src="img/person2.png" alt="Ana G." class="testimonial-photo">
                 <h4 class="testimonial-name">Ana G.</h4>
                 <p class="testimonial-occupation">Médico</p>
             </div>
-    
-            <!-- Testimonio 3 -->
+
+            <!-- Testimonial 3 -->
             <div class="testimonial-card">
                 <img src="img/quote-icon.png" alt="Comillas" class="quote-icon">
-                <p class="testimonial-text">"Finalmente encontré un maquillaje que no irrita mi piel sensible. Además, el acabado es increíblemente natural."</p>
+                <p class="testimonial-text">"Finalmente encontré un maquillaje que no irrita mi piel sensible. Además,
+                    el acabado es increíblemente natural."</p>
                 <img src="img/person3.png" alt="Carolina S." class="testimonial-photo">
                 <h4 class="testimonial-name">Carolina S.</h4>
                 <p class="testimonial-occupation">Ingeniera</p>
@@ -196,9 +205,11 @@
         </div>
     </section>
 
-    <section class="container newsletter-section">
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="container newsletter-section">
         <div class="newsletter-content">
-            <h2 class="newsletter-title">¡Suscríbete a nuestro boletín y estate <br> atento a nuestros próximos descuentos!</h2>
+            <h2 class="newsletter-title">¡Suscríbete a nuestro boletín y estate <br> atento a nuestros próximos
+                descuentos!</h2>
             <form class="newsletter-form">
                 <div class="input-container">
                     <i class="fas fa-envelope input-icon"></i>
@@ -208,8 +219,64 @@
             </form>
         </div>
     </section>
-    
-    
+
+    <footer>
+        <div class="container py-5">
+            <div class="row">
+                <!-- Brand and Description -->
+                <div class="col-md-3 footer-brand">
+                    <h4>Árnica</h4>
+                    <p>Productos Naturales <br> para el cuidado diario <br> de la piel</p>
+                </div>
+
+                <!-- Nosotros Section -->
+                <div class="col-md-2 footer-links">
+                    <h5>Nosotros</h5>
+                    <ul>
+                        <li><a href="#">Quiénes somos</a></li>
+                        <li><a href="#">Nuestro Equipo</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Ayuda Section -->
+                <div class="col-md-2 footer-links">
+                    <h5>Ayuda</h5>
+                    <ul>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="#">Privacidad</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="col-md-3 footer-contact">
+                    <h5>Contacto</h5>
+                    <ul>
+                        <li><i class="fa fa-phone"></i> +51 953 889 070</li>
+                        <li><i class="fa fa-envelope"></i> arnicabeauty@outlook.com</li>
+                    </ul>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="col-md-2 footer-social">
+                    <h5>Redes Sociales</h5>
+                    <ul>
+                        <li><a href="https://www.instagram.com/arnicabeautyperu/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://x.com/arnicabeautype" target="_blank" rel="noopener"><i class="fab fa-twitter"></i>  Twitter</a></li>
+                        <li><a href="https://www.tiktok.com/@arnica.beauty" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i> TikTok</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="row mt-4">
+                <div class="col-md-12 text-center">
+                    <p class="footer-bottom">&copy; 2024 Árnica Beauty</p>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+
 
 
     <script src="js/bootstrap.min.js"></script>
