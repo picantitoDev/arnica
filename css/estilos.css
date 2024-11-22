@@ -1,6 +1,17 @@
 /* Navbar Styles */
 *{
     text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden; /* Evita scroll horizontal */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
+body {
+    padding-top: 80px;
 }
 
 /* Navbar */
@@ -118,12 +129,6 @@
 }
 
 
-
-
-body {
-    padding-top: 80px;
-}
-
 /* Logo */
 .logo-img {
     height: 50px;
@@ -135,7 +140,11 @@ body {
     font-weight: bold;
 }
 
-/* Hero Section */
+
+
+
+/*-----------------------HERO-------------------------------*/
+/* General Hero Styling */
 .hero-container {
     display: flex;
     align-items: center;
@@ -264,6 +273,7 @@ body {
     right: 150px; 
     z-index: 1;
 }
+
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -558,26 +568,29 @@ body {
 
 
 
-/* Estilo para la sección de promoción */
+
+
+/* Sección de promoción */
 .promo-section {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: auto; /* Permitir altura dinámica */
     background: url('../img/fondo-makeup.png') no-repeat center center;
     background-size: cover;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-start; /* Alinear el contenido a la izquierda */
     padding: 40px;
     color: #4a4a4a;
 }
 
 /* Contenido de la promoción */
 .promo-content {
-    text-align: left;
     max-width: 500px;
-    position: relative;
-    left: 100px; 
+    padding: 20px;
+    text-align: left; /* Alinear texto a la izquierda */
+    margin-left: 50px; /* Ajuste para mover ligeramente a la derecha */
+
 }
 
 /* Estilo para la etiqueta de categoría */
@@ -590,8 +603,8 @@ body {
 
 /* Título de la promoción */
 .promo-title {
-    font-size: 5.5rem;
-    line-height: 1; 
+    font-size: 4rem;
+    line-height: 1.2; 
     font-weight: bold;
     color: #613543;
     margin-bottom: 10px;
@@ -599,7 +612,7 @@ body {
 
 /* Subtítulo de la promoción */
 .promo-subtitle {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 500;
     color: #F04E51;
     margin-bottom: 20px;
@@ -623,50 +636,16 @@ body {
     transform: scale(1.05);
 }
 
-/* ================= RESPONSIVE DESIGN ================= */
-/* Pantallas medianas (tablets) */
-@media (max-width: 992px) {
+/* =================== RESPONSIVE DESIGN =================== */
+
+/* Tablets (lg y md) */
+@media (max-width: 1024px) {
     .promo-section {
-        height: 450px;
-        padding: 20px;
+        padding: 30px;
     }
 
     .promo-content {
         max-width: 400px;
-        left: 50px; 
-    }
-
-    .promo-title {
-        font-size: 4rem;
-    }
-
-    .promo-subtitle {
-        font-size: 1.5rem;
-    }
-
-    .promo-button {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-}
-
-/* Pantallas pequeñas (móviles) */
-@media (max-width: 768px) {
-    .promo-section {
-        height: auto; 
-        padding: 20px;
-        justify-content: center; 
-        text-align: center;
-    }
-
-    .promo-content {
-        max-width: 100%;
-        position: relative;
-        margin-right: 200px;
-    }
-
-    .promo-tagline {
-        font-size: 1.5rem;
     }
 
     .promo-title {
@@ -678,15 +657,40 @@ body {
     }
 
     .promo-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Pantallas pequeñas (sm) */
+@media (max-width: 768px) {
+    .promo-section {
+        padding: 20px;
+    }
+
+    .promo-content {
+        max-width: 100%;
+        text-align: left; /* Mantener alineación a la izquierda en móviles */
+    }
+
+    .promo-title {
+        font-size: 2.5rem;
+    }
+
+    .promo-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .promo-button {
         padding: 8px 16px;
         font-size: 0.8rem;
     }
 }
 
-/* Pantallas muy pequeñas (teléfonos compactos) */
+/* Pantallas muy pequeñas (xs) */
 @media (max-width: 576px) {
     .promo-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .promo-subtitle {
@@ -694,10 +698,12 @@ body {
     }
 
     .promo-button {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         padding: 6px 12px;
     }
 }
+
+
 
 
 
