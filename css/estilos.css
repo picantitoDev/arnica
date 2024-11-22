@@ -3,13 +3,67 @@
     text-decoration: none;
 }
 
+/* Navbar general */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     border-bottom: 1px solid #ddd;
+    background-color: #fff; /* Asegura fondo blanco en dispositivos móviles */
 }
+
+/* Logo */
+.logo-img {
+    height: 50px;
+}
+
+.brand-name {
+    font-family: 'Times New Roman', serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Búsqueda */
+.search-bar input {
+    width: 100%; /* Ajustar al contenedor */
+    max-width: 300px; /* Limitar el ancho */
+}
+
+.btn-search {
+    background: none;
+    border: none;
+    color: #333;
+}
+
+/* Iconos */
+.navbar-icons .nav-icon {
+    font-size: 1.2rem;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.navbar-icons .nav-icon:hover {
+    color: #BD0081;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .search-bar {
+        margin-bottom: 10px; /* Espacio extra en móviles */
+    }
+
+    .search-bar input {
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    .navbar-icons {
+        justify-content: center;
+    }
+}
+
+
+
 
 body {
     padding-top: 80px;
@@ -604,30 +658,32 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end; /* Alinea el contenido hacia la derecha */
     padding: 50px;
     height: 600px;
     background: url('../img/fondo-modelo.png') no-repeat center center/cover;
 }
 
+/* Contenido de About Us */
 .about-us-content {
-    max-width: 700px;
+    max-width: 500px; /* Reducir el ancho máximo */
     color: #fff;
-    text-align: center;
-    margin: 0 auto;
-    position: relative;
-    left: 280px;
+    text-align: right; /* Alinear texto a la derecha */
+    margin: 0;
+    padding: 20px;
 }
 
+/* Título de la sección */
 .about-us-title {
     font-family: 'Laila', sans-serif;
-    font-size: 3rem;
+    font-size: 2.5rem; /* Reducir tamaño del texto */
     font-weight: 501;
     text-shadow: 2px 5px 4px rgba(0, 0, 0, 0.3);
     line-height: 1.3;
     margin-bottom: 20px;
 }
 
+/* Título en cursiva */
 .about-us-title em {
     font-style: italic;
     font-weight: 700;
@@ -639,21 +695,91 @@ body {
     font-weight: 400;
 }
 
+/* Botón */
 .about-us-button {
     display: inline-block;
     padding: 15px 30px;
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* Ajustar tamaño del botón */
     font-weight: bold;
     color: #fff;
     background-color: #FE1233;
     border-radius: 12px;
     text-decoration: none;
-    margin-top: 40px;
+    margin-top: 30px;
     transition: background-color 0.3s ease;
 }
 
 .about-us-button:hover {
     background-color: #ff4c4c;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+/* Pantallas medianas (tablets) */
+@media (max-width: 992px) {
+    .about-us-section {
+        height: auto; /* Ajustar altura automáticamente */
+        padding: 40px;
+        justify-content: flex-end; /* Mantener alineado a la derecha */
+    }
+
+    .about-us-content {
+        max-width: 400px; /* Reducir ancho en pantallas medianas */
+        text-align: right; /* Mantener alineación a la derecha */
+        padding: 10px;
+    }
+
+    .about-us-title {
+        font-size: 2rem; /* Reducir tamaño del texto */
+    }
+
+    .about-us-button {
+        padding: 12px 24px; /* Ajustar tamaño del botón */
+        font-size: 1rem;
+    }
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .about-us-section {
+        height: auto;
+        padding: 20px;
+        justify-content: center; /* Centrar contenido en móviles */
+    }
+
+    .about-us-content {
+        max-width: 90%; /* Ocupa el 90% del ancho */
+        text-align: center; /* Centrar texto para móviles */
+        padding-top: 20px;
+    }
+
+    .about-us-title {
+        font-size: 1.8rem; /* Reducir tamaño del texto */
+        line-height: 1.2; /* Ajustar separación de líneas */
+    }
+
+    .about-us-button {
+        padding: 10px 20px; /* Reducir tamaño del botón */
+        font-size: 0.9rem;
+        position: relative;
+        bottom: 20px;
+    }
+}
+
+/* Pantallas muy pequeñas (teléfonos compactos) */
+@media (max-width: 576px) {
+    .about-us-section {
+        padding: 15px;
+    }
+
+    .about-us-title {
+        font-size: 1.5rem; /* Reducir tamaño del texto */
+        line-height: 1.1; /* Compactar líneas */
+    }
+
+    .about-us-button {
+        font-size: 0.8rem; /* Reducir tamaño del texto del botón */
+        padding: 8px 16px; /* Ajustar tamaño del botón */
+    }
 }
 
 
@@ -737,7 +863,6 @@ body {
     color: #8A8889;
     margin-top: -8px;
 }
-
 /* Sección de boletín */
 .newsletter-section {
     padding: 40px;
@@ -746,40 +871,47 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-color: #ffffff; /* Fondo para pantallas sin imagen */
 }
 
+/* Contenido del boletín */
 .newsletter-content {
-    width: 900px;
-    height: 300px;
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
     background-image: url("../img/fondo-newsletter.png");
-    background-repeat: no-repeat; 
-    background-size: cover; 
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
+    border-radius: 20px;
 }
 
-
+/* Título del boletín */
 .newsletter-title {
     font-family: 'Lato', sans-serif;
     font-size: 2rem;
     font-weight: 700;
     color: #333;
-    margin-top: 80px;
-    margin-bottom: 40px;
+    margin: 20px 0 40px; /* Ajustar márgenes */
 }
 
+/* Formulario del boletín */
 .newsletter-form {
     display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
     align-items: center;
     justify-content: center;
     gap: 15px;
 }
 
+/* Contenedor del input */
 .input-container {
     position: relative;
     width: 100%;
     max-width: 400px;
 }
 
+/* Ícono dentro del input */
 .input-icon {
     position: absolute;
     top: 50%;
@@ -789,6 +921,7 @@ body {
     font-size: 1.2rem;
 }
 
+/* Input de correo */
 .newsletter-input {
     width: 100%;
     padding: 12px 15px 12px 40px;
@@ -799,6 +932,7 @@ body {
     outline: none;
 }
 
+/* Botón de suscripción */
 .newsletter-button {
     background: linear-gradient(180deg, #F22FB0, #7061A3);
     color: #fff;
@@ -814,4 +948,81 @@ body {
 
 .newsletter-button:hover {
     transform: scale(1.05);
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+/* Pantallas medianas (tablets) */
+@media (max-width: 992px) {
+    .newsletter-content {
+        max-width: 700px; /* Reducir ancho máximo */
+        padding: 15px; /* Ajustar espacio interno */
+    }
+
+    .newsletter-title {
+        font-size: 1.8rem; /* Reducir tamaño del texto */
+        margin-bottom: 30px; /* Ajustar margen inferior */
+    }
+
+    .newsletter-form {
+        gap: 10px; /* Reducir el espacio entre elementos */
+    }
+
+    .newsletter-button {
+        font-size: 0.9rem; /* Reducir el tamaño del botón */
+        padding: 10px 20px;
+    }
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .newsletter-content {
+        max-width: 100%; /* Usar todo el ancho disponible */
+        padding: 10px;
+    }
+
+    .newsletter-title {
+        font-size: 1.6rem;
+        line-height: 1.4; /* Ajustar espacio entre líneas */
+    }
+
+    .newsletter-form {
+        flex-direction: column; /* Colocar elementos en columna */
+        gap: 10px;
+    }
+
+    .input-container {
+        max-width: 100%; /* Usar el ancho completo */
+    }
+
+    .newsletter-button {
+        width: 100%; /* Botón ocupa todo el ancho */
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+
+    .newsletter-title br {
+        display: none; /* Ocultar los saltos de línea originales */
+    }
+
+    .newsletter-title:after {
+        white-space: pre-wrap; /* Forzar salto de línea en los espacios */
+        display: block;
+    }
+}
+
+/* Pantallas muy pequeñas (teléfonos compactos) */
+@media (max-width: 576px) {
+    .newsletter-title {
+        font-size: 1.4rem; /* Reducir el tamaño del texto */
+        margin-bottom: 20px; /* Ajustar margen inferior */
+    }
+
+    .newsletter-form {
+        gap: 8px;
+    }
+
+    .newsletter-button {
+        font-size: 0.8rem; /* Reducir tamaño del texto del botón */
+        padding: 10px;
+    }
 }
