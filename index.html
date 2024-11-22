@@ -7,9 +7,17 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kite+One&family=Laila:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kite+One&family=Laila:wght@400;700&display=swap"
+        rel="stylesheet">
     <title>Árnica | Cosméticos Naturales</title>
 </head>
 
@@ -78,73 +86,46 @@
         </div>
     </section>
 
-    <!-- Featured Products Section -->
-    <section id="featured-products">
-        <div class="container featured-products-title">
-            <h2>PRODUCTOS DESTACADOS</h2>
+    <div class="container owl-carousel owl-theme">
+        <div class="item">
+            <img src="img/producto1.png" alt="">
         </div>
-
-        <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <!-- Product 1 -->
-                <div class="carousel-item active">
-                    <div class="d-flex justify-content-center">
-                        <div class="card product-card">
-                            <div class="product-image">
-                                <img src="img/producto1.png" class="card-img-top" alt="Athena Serum">
-                                <div class="heart-icon"><i class="fas fa-heart"></i></div>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="product-name">ATHENA SERUM DE VITAMINA C 30ML</h5>
-                                <p class="product-price">S/. 126.00</p>
-                                <div class="product-rating">★★★★★</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product 2 -->
-                <div class="carousel-item">
-                    <div class="d-flex justify-content-center">
-                        <div class="card product-card">
-                            <div class="product-image">
-                                <img src="img/producto2.png" class="card-img-top" alt="Blush Labial">
-                                <div class="heart-icon"><i class="fas fa-heart"></i></div>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="product-name">BLUSH LABIAL NATURAL</h5>
-                                <p class="product-price">S/. 98.00</p>
-                                <div class="product-rating">★★★★★</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product 3 -->
-                <div class="carousel-item">
-                    <div class="d-flex justify-content-center">
-                        <div class="card product-card">
-                            <div class="product-image">
-                                <img src="img/producto3.png" class="card-img-top" alt="Bulgarian Rose Water">
-                                <div class="heart-icon"><i class="fas fa-heart"></i></div>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="product-name">BULGARIAN ROSE WATER</h5>
-                                <p class="product-price">S/. 110.00</p>
-                                <div class="product-rating">★★★★★</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Carousel Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
+        <div class="item">
+            <img src="img/producto1.png" alt="">
         </div>
-    </section>
+        <div class="item">
+            <img src="img/producto1.png" alt="">
+        </div>
+        <div class="item">
+            <img src="img/producto1.png" alt="">
+        </div>
+        <div class="item">
+            <img src="img/producto1.png" alt="">
+        </div>
+        <div class="item">
+            <img src="img/producto1.png" alt="">
+        </div>
+        <div class="item">
+            <img src="img/producto1.png" alt="">
+        </div>
+        <div class="item">
+            <img src="img/producto1.png" alt="">
+        </div>
+        <div class="item">
+            <img src="img/producto1.png" alt="">
+        </div>
+        <div class="item">
+            <img src="img/producto1.png" alt="">
+        </div>
+        <div class="item">
+            <img src="img/producto1.png" alt="">
+        </div>
+        <div class="item">
+            <img src="img/producto1.png" alt="">
+        </div>
+    </div>
+
+
 
     <!-- Promo Section -->
     <section id="promo">
@@ -261,9 +242,12 @@
                 <div class="col-md-2 footer-social">
                     <h5>Redes Sociales</h5>
                     <ul>
-                        <li><a href="https://www.instagram.com/arnicabeautyperu/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="https://x.com/arnicabeautype" target="_blank" rel="noopener"><i class="fab fa-twitter"></i>  Twitter</a></li>
-                        <li><a href="https://www.tiktok.com/@arnica.beauty" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i> TikTok</a></li>
+                        <li><a href="https://www.instagram.com/arnicabeautyperu/" target="_blank" rel="noopener"><i
+                                    class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://x.com/arnicabeautype" target="_blank" rel="noopener"><i
+                                    class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="https://www.tiktok.com/@arnica.beauty" target="_blank" rel="noopener"><i
+                                    class="fab fa-tiktok"></i> TikTok</a></li>
                     </ul>
                 </div>
             </div>
@@ -272,17 +256,41 @@
                 <div class="col-md-12 text-center">
                     <p class="footer-bottom">&copy; 2024 Árnica Beauty</p>
                 </div>
-                
+
             </div>
         </div>
     </footer>
 
 
 
-    <script src="js/bootstrap.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
-
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+    </script>
 </body>
 
 </html>
