@@ -58,6 +58,24 @@
                 </div>
             </div>
         </nav>
+
+        <div class="offcanvas-menu" id="offcanvasMenu">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title">Menú</h5>
+                <button type="button" class="btn-close" data-dismiss="offcanvas" aria-label="Close">&times;</button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="menu-list">
+                    <li><a href="#section1">Inicio</a></li>
+                    <li><a href="#section2">Productos</a></li>
+                    <li><a href="#section3">Acerca de</a></li>
+                    <li><a href="#section4">Promociones</a></li>
+                    <li><a href="#section5">Servicios</a></li>
+                    <li><a href="#section6">Testimonios</a></li>
+                    <li><a href="#section7">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <!-- Hero Section -->
@@ -86,42 +104,55 @@
         </div>
     </section>
 
+    <div class="container text-center my-4">
+        <h2 class="section-title">PRODUCTOS DESTACADOS</h2>
+    </div>
+
     <div class="container owl-carousel owl-theme">
         <div class="item">
-            <img src="img/producto1.png" alt="">
+            <div class="product-card">
+                <div class="product-card-header">
+                    <img src="img/producto1.png" class="img-fluid" alt="ATHENA SERUM DE VITAMINA C">
+                    <span class="favorite-icon">❤️</span>
+                </div>
+                <div class="product-card-body">
+                    <h5 class="product-title">ATHENA SERUM 30ML</h5>
+                    <p class="product-price">S/. 126.00</p>
+                    <div class="product-rating">
+                        <span>★★★★★</span>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="item">
-            <img src="img/producto1.png" alt="">
+            <div class="product-card">
+                <div class="product-card-header">
+                    <img src="img/producto2.png" class="img-fluid" alt="ATHENA BLUSH">
+                    <span class="favorite-icon">❤️</span>
+                </div>
+                <div class="product-card-body">
+                    <h5 class="product-title">ATHENA BLUSH 30ML</h5>
+                    <p class="product-price">S/. 126.00</p>
+                    <div class="product-rating">
+                        <span>★★★★★</span>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="item">
-            <img src="img/producto1.png" alt="">
-        </div>
-        <div class="item">
-            <img src="img/producto1.png" alt="">
-        </div>
-        <div class="item">
-            <img src="img/producto1.png" alt="">
-        </div>
-        <div class="item">
-            <img src="img/producto1.png" alt="">
-        </div>
-        <div class="item">
-            <img src="img/producto1.png" alt="">
-        </div>
-        <div class="item">
-            <img src="img/producto1.png" alt="">
-        </div>
-        <div class="item">
-            <img src="img/producto1.png" alt="">
-        </div>
-        <div class="item">
-            <img src="img/producto1.png" alt="">
-        </div>
-        <div class="item">
-            <img src="img/producto1.png" alt="">
-        </div>
-        <div class="item">
-            <img src="img/producto1.png" alt="">
+            <div class="product-card">
+                <div class="product-card-header">
+                    <img src="img/producto3.png" class="img-fluid" alt="ATHENA BLUSH">
+                    <span class="favorite-icon">❤️</span>
+                </div>
+                <div class="product-card-body">
+                    <h5 class="product-title">ATHENA BLUSH 30ML</h5>
+                    <p class="product-price">S/. 126.00</p>
+                    <div class="product-rating">
+                        <span>★★★★★</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -291,6 +322,37 @@
             }
         })
     </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.querySelector(".navbar-toggler");
+        const offcanvasMenu = document.querySelector("#offcanvasMenu");
+        const closeButton = document.querySelector(".btn-close");
+
+        // Abre el menú al hacer clic en el botón de hamburguesa
+        menuButton.addEventListener("click", function () {
+            offcanvasMenu.classList.add("active");
+        });
+
+        // Cierra el menú al hacer clic en la "X"
+        closeButton.addEventListener("click", function () {
+            offcanvasMenu.classList.remove("active");
+        });
+
+        // Cierra el menú al hacer clic en cualquier enlace
+        document.querySelectorAll(".menu-list a").forEach(link => {
+            link.addEventListener("click", function () {
+                offcanvasMenu.classList.remove("active");
+            });
+        });
+
+        // Opcional: Cierra el menú si se hace clic fuera de él
+        document.addEventListener("click", function (event) {
+            if (!offcanvasMenu.contains(event.target) && !menuButton.contains(event.target)) {
+                offcanvasMenu.classList.remove("active");
+            }
+        });
+    });
+</script>
 </body>
 
 </html>
